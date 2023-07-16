@@ -1,0 +1,269 @@
+<!DOCTYPE html> <!-- This is used to tell the browser that we are using HTML-5 version.-->
+<!-- Especially this issue occurs in Internet Expolore (an old browser)-->
+<!-- what is the reason that browser unable to render --- > "coerx mode/issue"something like this -- interview Question.-->
+
+<html>
+    <head>
+        <!-- Anything that providing more info, about  thewebpage 
+            also,anything written inside head tag won't be disaplyed on browser.-->
+        
+        <title>My First WebPage</title>
+
+        <!-- Most imp. thing we do in head tag is we connect our css and js files with this  in this section-->
+        <!-- We provide more info. of our website.
+        This info will be used by search engines like google search for indexing purpose. -->
+
+        <meta name="author" content="Shayan Ideas" />
+        <meta name = "description" content="This is a website to teach html." />
+        <meta charset="UTF-8" />
+
+        <!-- Character Encoding: a ->  ASCII : 97 -> 1100001 
+        UTF (parent)  -> ASCII (child)  : all the ASCII characters are in UTF, even  UTF Encoding has more characters-->
+
+        <!-- VERY IMPORTANT INTERVIEW QUESTION -->
+        <meta name="viewport" content="width:device-width, initial-scale=1.0"/>
+        <!--  -->
+
+        <!-- <meta http-equiv="refresh" content="10" /> -->
+        <!-- "refresh"
+        This instruction specifies:
+
+        The number of seconds until the page should be reloaded - only if the content attribute contains a positive integer.
+        The number of seconds until the page should redirect to another - only if the content attribute contains
+        a positive integer followed by the string ';url=', and a valid URL. -->
+
+
+
+        <!-- Task:
+        I want to connect some css files with this html file -->
+        <!-- <link /> The link element allows authors to link their document to other resources. -->
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="IITG_logo.png" />   <!-- Add icon in front of title of web page-->
+        
+        <!-- Task:
+        I want  to connect some JavaScript files with this html file. -->
+        <!-- <script>
+            alert("Hi Shayan")  
+        </script>   -->
+        
+        <!-- inline js : writejs code in the same page.--> 
+        <!-- we can write CSS also inline by using "style" tag.-->
+
+        <!-- <script src="random.js"></script>  -->
+        <!--Here, i put js in other file. -->
+
+
+        <style>
+            body{
+                background-color: rgb(180, 157, 157);  
+            }
+        </style>  <!-- recommendation is : create css and js file seperately and attach here using "link" and "script inline"-->
+
+
+
+    </head>
+
+
+    <body>
+
+        <!-- Anything that we want to display on the browser -->
+
+        <!--Heading tag h1, h2 h3 h4 h5 h6 -->
+        <h1>LETTER_HEADING</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        <h5> This is heading 5</h5>
+        <h6> This is heading 6</h6>
+
+        <!--
+            below 2 line will act as general line.
+        -->
+        <!-- <h7>This is heading 7</h7>
+        <h8> This is heading 8</h8> -->
+
+        <!-- Task:
+        My task is to show my company name where i work and if you click on that text, I will redirect/take you to my company web page. -->
+        <a href="https://www.iitg.ac.in/"> My company name is IIT Guwahati</a>
+        <!-- this  kind of anchor tag -- > lead to -- > new web page opens in same tab.-->
+
+        <P> My Company name is IIT Guwahati.
+            <a href="https://www.iitg.ac.in/"> Click here to go to IIT Guwahati</a>
+        </P>
+
+        <!-- open page in new tab ------ add extra attribute [[target="_blank","_parent", "_self", "_top"]]-->
+        <P> My Company name is IIT Guwahati.
+            <a href="https://www.iitg.ac.in/" target="_blank"> Click here to go to IIT Guwahati in other tab</a>
+        </P>
+
+
+        <!-- lorem -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Esse corrupti corporis perferendis fuga dolorum minima, labore possimus itaque libero, 
+        fugit sapiente delectus quidem eligendi at autem. Reiciendis amet similique quibusdam.
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti doloremque, nulla, natus facere, eum ipsa nemo officia ut porro mollitia et quam eligendi maiores corporis ab unde saepe quos voluptatem!</p>
+
+        <!-- Task:
+        Draw a horizontal line after above paragraph.
+        Semantics : I want to draw a line to depict separation amongst my contet. -->
+        <hr />
+
+
+        <!-- Task:
+        Create a list:
+        1. Shayan
+        2. Shyam
+        3. Sonu
+        4. Rahul
+        5. Ronak -->
+
+        <h2>Names of Students: </h2>
+        
+        <!-- Whenever we want numbered list, then, we will use Ordered list
+        Tag - ol -->
+        <ol>
+            <li>Shayan</li>
+            <li>Shyam</li>
+            <li>Rahul</li>
+            <li>Aditya</li>
+            <li>Sonu</li>
+            <li>Ronak</li>
+        </ol>
+
+        <!-- <ol type="1","A","a","I","i"><li>Shyam</li></ol> -->
+        <ol type="I">
+            <li>Shayan</li>
+            <li>Shyam</li>
+            <li>Rahul</li>
+            <li>Aditya</li>
+            <li>Sonu</li>
+            <li>Ronak</li>
+        </ol>
+
+        <!-- Start numbering from a particular NUMBER -->
+        <ol type="I", start="50">
+            <li>Shayan</li>
+            <li>Shyam</li>
+            <li>Rahul</li>
+            <li>Aditya</li>
+            <li>Sonu</li>
+            <li>Ronak</li>
+        </ol>
+
+
+        <!-- Task:
+            I want a list but it should not be numbered, i need only bullet point. 
+        Tag - ul -->
+        <ul>
+            <li>Shayan</li>
+            <li>Shyam</li>
+            <li>Rahul</li>
+            <li>Aditya</li>
+            <li>Sonu</li>
+            <li>Ronak</li>
+        </ul>
+
+
+        <!-- Description List 
+        Tag -> dl -->
+
+        <!-- Child tags - dt, dd  -->
+        <dl>
+            <dt> Shayan </dt>
+            <dd> IIT Guwahati </dd>
+
+            <dt> Shyam </dt>
+            <dd> IIT Delhi</dd>
+        </dl>
+
+
+        <hr>
+
+
+        <!-- Tag: <div> .... </div> -->
+        <!-- The div element has no special meaning at all. It represents its children. 
+        It can be used with the class, lang, and title attributes to mark up semantics common to 
+        a group of consecutive elements. -->
+        <div>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorum, enim nobis in 
+                quasi perspiciatis porro optio! Eligendi perferendis neque, tenetur provident ipsam 
+                rem! Hic natus harum quis amet exercitationem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam debitis nihil 
+                id voluptatem, voluptates, quas a quidem ipsum sequi inventore architecto, veritatis 
+                officiis obcaecati laborum assumenda itaque esse? Culpa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Laboriosam libero maiores veniam recusandae hic rem blanditiis maxime vitae nobis vel explicabo, 
+            aut voluptatibus <span style="background-color: red; font-weight: 700;"> eligendi voluptas molestiae aliquid dolor </span> culpa! Quis?</p>
+        </div>
+
+        <span> This is a span element</span>
+
+        <div style="background-color: blueviolet;">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorum, enim nobis in 
+                quasi perspiciatis porro optio! Eligendi perferendis neque, tenetur provident ipsam 
+                rem! Hic natus harum quis amet exercitationem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam debitis nihil 
+                id voluptatem, voluptates, quas a quidem ipsum sequi inventore architecto, veritatis 
+                officiis obcaecati laborum assumenda itaque esse? Culpa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Laboriosam libero maiores veniam recusandae hic rem blanditiis maxime vitae nobis vel explicabo, 
+            aut voluptatibus <span> eligendi voluptas molestiae aliquid dolor </span> culpa! Quis?</p>
+        </div>
+        <hr />
+
+        <!-- ///// <img /> ///// -->
+        <img src="dummy_image.jpg" width="100%" height="100%" />
+        <img src="dummy_image.jpg" width="100%" height="auto" />
+        <img src="dummy_image.jpg" width="400px" height="auto" />
+
+        <img src="dummy_image.jpg" width="400px" height="auto" alt="A girl riding cycle"/>
+        <img src="dummy_imagexxxxxxx.jpg" width="400px" height="auto" alt="A girl riding cycle"/>
+        <img src="dummy_image.jpg" width="400px" height="auto" alt="A girl riding cycle"/>
+
+
+        <!-- <audio src=""></audio> -->
+        <audio controls></audio> <!-- controls takes boolean value , you can write a : controls="true"-->
+        
+        <audio controls>
+            <source src="old_yes boss-Ek Din Aap.mp3" type="audio/mpeg">
+            <source src="dummy_OOG_2MG.ogg" type="audio/ogg" >
+        </audio>
+
+        <!-- if first audio is not supported in browser or file not available, 
+            then  go to 2nd audio, you can put multiple audion in row.-->
+        <audio controls>
+            <source src="old_yes boss-Ek Din Aapxxxxxxx.mp3" type="audio/mpeg">
+            <source src="dummy_OOG_2MG.ogg" type="audio/ogg" > 
+            Audio is not supported.
+        </audio>
+
+        <video controls loop autoplay></video> <!-- controls takes boolean value , you can write a : controls="true"-->
+
+        <!-- loop takes boolean value , you can write a : loop="true"  -> video will again start after finish.-->
+
+        <video controls width="480px" height="auto" loop>
+            <source src="hamko_hami_se.mp4" type="video/mp4">
+            <!-- more than one sources-->
+            Video is not supported.
+        </video>
+
+        <video controls >
+            <source src="hamko_hami_se.mp4" type="video/mp4">
+            <!-- more than one sources-->
+            Video is not supported.
+        </video>
+
+        <video controls width="480px" height="auto" loop autoplay>
+            <source src="videoplayback.mp4" type="video/mp4">
+            <!-- more than one sources-->
+            Video is not supported.
+        </video>
+
+
+    </body>
+</html>
+
+
+

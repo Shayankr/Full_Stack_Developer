@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Introduction</title>
+
+
+    <!-- Internal CSS <style>  -->
+    <style>
+        table, th, td, tr {
+            border: 1px solid black;
+        }
+        #unique_3{
+            background-color: blueviolet;
+        }
+        h1 {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <header id="unique_2" class="random">
+        <h1 id="unique_1" class="random">Table Introduction</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shayan</td>
+                    <td>224102319</td>
+                    <td>9.06</td>
+                </tr>
+                <tr>
+                    <td>Anindya</td>
+                    <td>224102302</td>
+                    <td>9.8</td>
+                </tr>
+                <tr>
+                    <td>Venky</td>
+                    <td>221023xx</td>
+                    <td>9.3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- <thead></thead> and <tbody></tbody> is 'semantic element' -->
+
+
+        <!-- // Table attributes: colspan, rowspan -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th colspan="3">Mobile Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Shayan <br/> Kumar</td>
+                    <td>9661400109</td>
+                    <td>0000000000</td>
+                    <td>0000000000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- use Table attributes:  rowspan -->
+        <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Sharad</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Mobile</th>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xxxxxxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xxx0xxxxxx</td>
+                </tr>
+                <tr>
+                    <td>xxxx1xxxxx</td>
+                </tr>
+        </table>
+
+
+
+        <!--Apply CSS in "inline" style.-->
+        <div>
+            <h1 style="background-color: brown;">Heading_1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi! Dignissimos error 
+                officiis veritatis, repudiandae totam eaque aut iusto omnis harum beatae fuga 
+                exercitationem similique excepturi animi ratione nesciunt voluptatum.</p>
+        </div>
+
+        <!--Apply CSS in "inline" style.-->
+        <div>
+            <h1 id="unique_3">Heading_2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, quasi! Dignissimos error 
+                officiis veritatis, repudiandae totam eaque aut iusto omnis harum beatae fuga 
+                exercitationem similique excepturi animi ratione nesciunt voluptatum.</p>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+
+<!-- Ways in which CSS is applied ?
+
+1. Inline -- "style" attribute ke through -> inside specific tag.
+
+2. Internal -- "style" tag (children of head tag) -- define style attribute inside head and mention where to apply.
+
+3. External -- link tag (children of head tag)
+    <link rel="stylesheet" href="style.css" />
+-->
+

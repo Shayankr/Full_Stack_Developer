@@ -1,0 +1,202 @@
+How flipkart.com works ?
+We talked on 2 characters - Client and Server
+
+Client - browser (Google Chrome)
+Server - is the person who is serving requests for client.
+
+
+What kind of things client needs?
+Html, css and js files.
+
+How can fulfill these requests?
+SERVER
+
+--------------------------------------------------
+HOW INTERNET WORKS !!!
+
+Client and Server
+
+How Client and Server interact with each other?
+
+How do machines/laptops/pcs can be identified? (unique identifier)
+IP ADDRESS (each machine has its own unique ip address)
+
+In order to talk to any machine?
+I need to know its ip address.
+
+flipkart.com --> DNS (Doamin Name System) --> flipkart ip address (let: 192.162.122.14)
+
+Introduce 2 more characters:
+
+1. TCP
+2. HTTP
+
+In order to cooner client and server :
+we make TCP (Transmission Control Protocol) - 3 way handsacking connection betwenn them (Computer Networking)
+
+Assume these 2 entities commected over TCP.
+Now, they will start REQUEST-RESPONSE cycle.
+
+In order for REQUEST-RESPONSE cycle to happen --> we need protocol --> we use HTTP protocol.
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Frontend:
+Browser is our whole world.
+Browser understands 3 things - html, css, js.
+
+HTML - Hypertext markup langueage.
+role: provides skeleton architecture/structure.
+
+CSS - Casceding Style Sheet.
+Role : 
+    To style / beautificcation of our html page.
+    Helps in layout.
+
+JavaScript: programming lang.
+-----------------------------------------------------------
+<TAGNAME> content </TAGNAME> --> this forms a HTML ELEMENT.
+-----------------------------------------------------------
+//
+<TAGNAME> </TAGNAME>
+
+HTML :
+1. Tags
+syntax: <TAGNAME> </TAGNAME>
+
+2. Attributes - provide more info about its tag or even change behaviour of its tag.
+Syntax: <TAGNAME ATTRIBUTE_NAME = "ATTRIBUTE_VALUE">  </TAGNAME>
+
+IMAGINE - tag named SHAYAN
+<SHAYAN id="unique@">  </SHAYAN>
+<SHAYAN>  </SHAYAN>
+<SHAYAN>  </SHAYAN>
+<SHAYAN>  </SHAYAN>
+<SHAYAN>  </SHAYAN>
+
+
+---------------------
+<TAG> or <TAG/>
+
+3. Self Closing tags / void tags --> 
+<hr> : Draw a horizontal line. we can also write as: <hr/>
+
+<br> : Inroduce new line (but not preferred for new line)
+
+<meta> : to add multiple information about the web-page.
+
+<img> : 
+
+
+
+----------------------------------------------------------------------------------------
+List:
+    1. Ordered list:
+        <ol type="I", start="50"> <li>SHAYAN</li> </ol>
+
+    2. Unoredred List:
+        <ul type="I", start="50"> <li>Shayan</li> </ul>
+
+    3. Description List:
+        <dl>
+            <dt> Shayan </dt>
+            <dd> Description List </dd>
+        </dl>
+-----------------------------------------------------------------------------------------
+
+////////////////////////////////////////////////////////////
+Tag: <div> ...contents... </div>
+    The div element has no special meaning at all. 
+    It represents its children. 
+    It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.
+-------
+
+
+Div -- 
+Findings:
+
+1. Block display type
+2. It acts as an container to group multipe childrens together.
+
+-------------------------
+
+P tag --
+Findings:
+
+1. It takes full available width.
+2. It always starts from a newline.
+
+-----------------------------
+
+Anchor (a) tag :
+Findings :
+
+1. It takes only that much space which is requiired for its contents.
+2. It starts on the same line.
+
+----------------------
+
+Every html element have some default display property:
+Boadly, it is of 2 types:
+
+1. Block :
+    1. It takes full available width.
+    2. It always starts from a newline.
+
+2. Inline :
+    i. It takes only that much space which is required for its contents.
+    ii. It starts on the same line.
+    e.g. - anchor (a), span 
+
+
+////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------
+
+/////////// <img src= "/Downlods/my_pic.jpg" /> /////////
+<img src="dummy_image.jpg" width="100%" height="100%" />
+<img src="dummy_image.jpg" width="100%" height="auto" />
+<img src="dummy_image.jpg" width="400px" height="auto" />
+-------
+
+Attribute : alt
+    When image is not able to load --> then show some alternatives.
+<img src="dummy_image.jpg" width="400px" height="auto" alt="A girl riding cycle"/>
+
+///////////////////////////////////////////////////////////
+------------------------------------------------------------------------------------------------------
+
+Tag : audio
+<audio src = " ..." > ... <audio />
+-------
+<audio controls></audio> <!-- controls takes boolean value , you can write a : controls="true"-->
+---------
+<audio controls>
+            <source src="old_yes boss-Ek Din Aap.mp3" type="audio/mpeg">
+            <source src="dummy_OOG_2MG.ogg" type="audio/ogg" >
+</audio>
+
+<!-- if first audio is not supported in browser or file not available, 
+    then  go to 2nd audio, you can put multiple audion in row.-->
+<audio controls>
+    <source src="old_yes boss-Ek Din Aapxxxxxxx.mp3" type="audio/mpeg">
+    <source src="dummy_OOG_2MG.ogg" type="audio/ogg" > 
+    Audio is not supported.
+</audio>
+
+------------------------------------------------------------------------------------------------------
+/////////////////////////////////////////////
+
+Tag : video
+
+<video controls loop autoplay> ... </video> <!-- controls takes boolean value , you can write a : controls="true"-->
+
+<!-- loop takes boolean value , you can write a : loop="true"  -> video will again start after finish.-->
+
+<video controls width="480px" height="auto" loop>
+    <source src="videoplayback.mp4" type="video/mp4">
+    <!-- more than one sources-->
+    Video is not supported.
+</video>
+
+/////////--------------------------------------------------------------------------------------------

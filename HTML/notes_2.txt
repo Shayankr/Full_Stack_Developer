@@ -1,0 +1,113 @@
+Semantic tags -- 
+
+    <header></header> 
+    <footer></footer>
+    <main></main>
+    <section></section>
+    <article></article>
+    <aside></aside>
+    <figure></figure>
+    <figcaption></figcaption>
+    <details></details>
+    <nav></nav>  ---------->usedfor main navigation panel --> inside it use "unordered list" . <ul><li> ... >/li></ul>
+
+    All these tags are BLOCK level type by nature.
+------------------------------------------------------------
+
+Tag : section -->
+    The section element represents a generic section of a document or application. 
+    A section, in this context, is a thematic grouping of content. E
+    ach section should be identified, typically by including a heading ( h1- h6 element) as a child 
+    of the section element.
+
+------------------------------------------------------------
+
+Tag : article -->
+    The article element represents a complete, or self-contained, composition in a document, page, 
+    application, or site and that is, in principle, independently distributable or reusable, 
+    e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, 
+    a user-submitted comment, an interactive widget or gadget, or any other independent item of content. 
+    Each article should be identified, typically by including a heading (h1–h6 element) as a child of 
+    the article element.
+
+--------------------------------------------------------------
+
+<figure>
+    <img src="dummy_image.jpg" width="200px" height="auto" />
+    <figcaption> Girl_with_Cycle</figcaption>
+</figure>
+
+--------------------------------------------------------------
+
+<details>
+    <summary>
+        MERN
+    </summary>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem officia, consequatur 
+        aspernatur suscipit, doloribus deleniti animi veritatis minus hic nihil ex voluptas fuga sint, 
+        quasi quis a ab porro cupiditate.
+    </p>
+</details>
+
+----------------------------------------------------------------
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+---------------TABLE ----------------------
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Shayan</td>
+            <td>224102319</td>
+            <td>9.06</td>
+        </tr>
+        <tr>
+            <td>Anindya</td>
+            <td>224102302</td>
+            <td>9.8</td>
+        </tr>
+        <tr>
+            <td>Venky</td>
+            <td>221023xx</td>
+            <td>9.3</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <thead></thead> and <tbody></tbody> is 'semantic element' -->
+
+
+        <!-- // Table attributes: colspan, rowspan -->
+
+
+
+
+
+/////////////////////////////////////////////////
+Ways in which CSS is applied ?
+
+1. Inline -- "style" attribute ke through -> inside specific tag.
+2. Internal -- "style" tag (children of head tag) -- define style attribute inside head and mention where to apply.
+3. External -- link tag (children of head tag)
+     <!-- Task:
+        I want to connect some css files with this html file -->
+        <!-- <link /> The link element allows authors to link their document to other resources. -->
+
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="icon" href="IITG_logo.png" />   <!-- Add icon in front of title of web page-->
+
+
+/////////////////////////////////////////////////
+
+--------form--------------------
+
+//
