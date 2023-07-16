@@ -11,12 +11,52 @@
 
         <!--      <form  action = " ...server location... ">    
             action = "  " is used to send/REQUEST the form data into SEREVR -->
-        <form action="dummyServer.html" method="get">
+        <form action="dummyServer.html" method="get" >
+
+
+            <!-- <form action="dummyServer.html" method="post" enctype="multipart/form-data"></form> -->
+
+            
+            <!-- When the value of the method attribute is post, enctype is the MIME type of content that is 
+                used to submit the form to the server. Possible values are:
+
+            1. application/x-www-form-urlencoded: The default value if the attribute is not specified.
+            
+            2. multipart/form-data: The value used for an <input> element with the type attribute set to "file".
+                    when trying to upload any kind of file from client to server (image, video,..)
+            
+            3. text/plain: (HTML5)
+            This value can be overridden by a formenctype attribute on a <button> or <input> element. -->
+
+            
+                <!-- The HTTP method that the browser uses to submit the form. Possible values are: 
+                get
+                post
+                dialog-->
 
             <!-- method has 3 values:
-                1. dialog
+                1. dialog --
+                        Use when the form is inside a <dialog> element to close the dialog when submitted.
+                        This value can be overridden by a formmethod attribute on a <button> or <input> element.
+
                 2. get -- (by default)
-                3.post 
+                    Corresponds to the HTTP GET method; form data are appended to the action attribute
+                     URI with a '?' as separator, and the resulting URI is sent to the server. 
+                     Use this method when the form has no side-effects and contains only ASCII characters.
+                
+                3. post -- Corresponds to the HTTP POST method; 
+                        form data are included in the body of the form and sent to the server.
+
+                        URL does not contain "data of form" -- it means URL doesn't conatins informations.
+
+                        If URL does not contains data, then how does data transfer to server??
+
+                        REQUEST - RESPONSE cycle: client - server :
+
+                        (HTTP protocols has 2 methods : get, post.)
+
+                    post : Data goes in special data structure : 
+
             -->
 
             <div>
@@ -48,7 +88,73 @@
 
 
             <div>
-                <input type="submit" />
+                <!-- Insert Checkbox  -- you can have multiple selection -- it is  not exclusive like radio button.-->
+                <!-- checkbox : on off-->
+                <label>Courses Enrolled : </label>
+                <input type="checkbox" name="math" id="math"/>
+                <label for="math">Math</label>
+
+                <input type="checkbox" name="dsa" id="dsa"/>
+                <label for="dsa">DSA</label>
+
+                <input type="checkbox" name="ml" id="ml"/>
+                <label for="ml">Machine Learning</label>
+
+                <input type="checkbox" name="stat" id="stat"/>
+                <label for="stat">Statistics</label>
+            </div>
+
+
+            <div>
+                <label>Submission date : </label>
+                <input type="date" name="date" id="date"/>
+            </div>
+
+            <div>
+                <label>Submission date : (with time) </label>
+                <input type="datetime-local" id="datetime" name="datetime" />
+            </div>
+
+            <div>
+                <label>Submission date: (only month) </label>
+                <input type="month" id="month" name="month"/>
+            </div>
+
+            <div>
+                <label for="email">Enter Email Id :</label>
+                <input type="email" id="email" name="email"/>
+            </div>
+
+            <div>
+                <label>Select Color : </label>
+                <input type="color" name="colorSelector" value="colorSelector"/>
+            </div>
+
+            <div>
+                <label>Select Range : </label>
+                <input type="range" name="rangeSelector"  />
+            </div>
+
+            <div>
+                <label>Select Number : </label>
+                <input type="number" name="numberSelector" min="0" max="50" step="10"/>
+            </div>
+
+
+            <div>
+                <label>File upload : </label>
+                <input type="file" name="fileUploader"  />
+            </div>
+
+            <div>
+                <input type="hidden" name="impData" value="impValue"/>
+            </div>
+
+
+            <div>
+                <input type="submit" value="Register"/>
+                <input type="reset"/>
+                <input type="button" value="I'm a button"/>
             </div>
             
         </form>
