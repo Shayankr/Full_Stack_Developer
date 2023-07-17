@@ -1,0 +1,40 @@
+
+#secondPara {
+    background-color: blueviolet;
+}
+
+
+p {
+    background-color: yellow;
+}
+
+
+#sixthPara{
+    background-color: brown;
+}
+
+
+p.bgColor {
+    background-color: cadetblue;
+}
+/* limit the scope of class for specific tag only , here only for <p> tag */
+
+
+#divider {
+    /* border: 1px solid; */
+    border-bottom: 5px solid;
+    margin-bottom: auto;
+}
+
+
+
+
+
+
+
+
+
+/* comment */
+
+/* comment line -1
+comment line -2 */

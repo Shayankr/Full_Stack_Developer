@@ -1,0 +1,159 @@
+
+HTML -> is for creating base structure (How ML TAGS and ELEMENTS)
+
+CSS ->  1. add styles( good visualibility) on HTML 
+        2. provide or to change/alter layout.
+
+JS -> add interactivity.
+
+
+-------------------------------------------------------------------------------------------------------------
+Implementation : ---
+How to use CSS ??
+
+There are 3 ways :
+1. Inline :
+        <HTML_TAG style="CSS_PROPERTY_NAME_1 : VALUE ; CSS_PROPERTY_NAME_2 : VALUE ; "> content </HTML_TAG>
+        example :
+        <h1 style="background-color: red; color: yellow;">Hi ! Welcome to CSS - first session</h1>
+
+        ---------------------------------------------
+
+2. Internal :
+
+        //inside "head" tag.
+
+        // 
+        SELECTOR ??
+
+            CSS wants to know on which HTML Tag you want to apply CSS on ??
+            e.g. - div, span, h1, img, section, article ???
+
+            Apart from that, SELECTOR can be any id or class value also.
+
+            for id -- use "#" before id
+            example : #id_1
+
+            for class -- use "dot" , "."
+            example : .class_1
+
+            for tag -- simple use tag_name
+
+
+NOTE : Preference : id > class > tag.
+
+        // example :
+        <style>
+            h2{
+                background-color: red;
+                color: white;
+            }
+        </style>
+        --------------------------------------------
+
+3. External :
+
+        // inside "head" tag
+
+        // use "link" -- to link extranal css sheet in current html page.
+
+        example :
+            <link rel="stylesheet" href="css_practice_1.css" />
+
+(already discussed in HTML codes)
+
+-----------------------------------------
+
+(Q1.):
+
+h1 - 
+
+Red color - inline
+aqua color - internal
+blue color - external
+
+what will be the final color on browser ??
+
+Ans : blue
+
+priority : INLINE > [INTERNAL EXTERNAL ??  JO BAAD ME LIKHA HOGA WHI FINALLY IMPLEMENTED HOGA
+                            TOP to BOTTOM CODE EXECUTION
+                                agar pagle bola blue .. phir baad me bole black kar do --> fnally black ho jayega.]
+
+CONCLUSION  w.r.to Precedence 
+
+INLINE > INTERNAL or EXTERNAL (Based on their position inside Head Tag)
+
+----------------------------------------------------------------------------------------------------------
+
+HTML syntax:
+<TAG> some content </TAG>
+
+
+CSS syntax:
+
+SELECTOR {
+    CSS_PROPERTY_NAME : VALUE
+}
+
+----------------------------------------------------------------------------------------------
+During our HTML Lectures :
+    We used to talk on 2 html attributes : 1. id 2. class
+    1. id (individually - unique indicator)
+    2. class (not unique but apply something unique based on a group)
+
+--------------------
+
+Selectors :
+
+1. Element Selector :
+
+p {}
+div {}
+
+
+
+2. ID Selecor :
+
+#ID_NAME {}
+
+
+
+3. CLASS Selector :
+
+.CLASS_NAME {}
+
+
+
+4. CLASS Selector with ELEMENT :
+
+            Apply the CSS only to given class with ospecific tag only.
+
+<ELEMENT_NAME><CLASS_NAME>
+
+eg. : p.bgColor --> apply css ONLY to those "p" tags which are having "bgColor" class.
+
+//
+
+
+
+5. Global Selector :
+    Symbol - *
+
+
+
+
+
+6. Combinators Selectors :
+
+Combination of more than one selector.
+
+1. Descendent Selector :
+
+<SELECTOR1><SPACE><SELECTOR2> {
+    //apply CSS here
+}
+-> ALL SELECTOR (all childrens/grandchildrens) under SELECTOR1 (parent) should be selected.
+
+----------------------------------------------------------------------------------------------
+//

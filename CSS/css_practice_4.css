@@ -1,0 +1,10 @@
+div p {
+    background-color: yellow;
+}
+/* All "p" tag under "div" tag should be color "yellow". */
+
+
+
+div div p {
+    background-color: blue;
+}
