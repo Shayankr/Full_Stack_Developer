@@ -9,9 +9,35 @@
     <header></header>
     <main>
 
+
+        <!-- Log in form -->
+        <form>
+            <!-- wrap all the contents of your form inside "fieldset"-->
+            <fieldset>
+                <legend>Login!</legend>
+            <div>
+                <label for="user_name">Username</label>
+                <input type="text" name="user_name" id="user_name" />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input  type="password" id="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" value="Login"/>
+            </div> 
+            </fieldset>            
+        </form>
+        <hr />
+
+
+
+
+
+
         <!--      <form  action = " ...server location... ">    
             action = "  " is used to send/REQUEST the form data into SEREVR -->
-        <form action="dummyServer.html" method="get" >
+        <form action="dummyServer.html" method="get" enctype="application/x-www-form-urlencoded">
 
 
             <!-- <form action="dummyServer.html" method="post" enctype="multipart/form-data"></form> -->
@@ -62,12 +88,47 @@
             <div>
                 <!-- Text field-->
                 <label for="name">Enter Name : </label>
-                <input type="text" maxlength="50" id="name" name="name" value="Shayan Kumar"/>
+                <input type="text" maxlength="50" id="name" name="name" placeholder="Enter Full Name" autofocus required/>
+
+                <!-- "required" : this field is necessary to fill -- to submit the field. -->
+
+                <!-- <input type="text" maxlength="50" id="name" name="name" value="Shayan Kumar" placeholder="Enter Full Name"/> -->
+
+                <!-- Placeholder value will not be visible, if any initial value is applied.-->
+            </div>
+
+            <div>
+                <!-- Text field-->
+                <label for="my_name">My Name : </label>
+                <input type="text" maxlength="50" id="my_name" name="my_name" value="Shayan" disabled/>
+
+                <!--"disabled" values are not send to serevr from client.
+                    http://127.0.0.1:5500/HTML/dummyServer.html?name=Shayan+Kumar&pre_name=ShayanKr&
+                    password=&password=0000&gender=others&ml=on&date=2023-07-17&datetime=&
+                    month=2023-07&email=shayankumar765%40gmail.com&colorSelector=%23000000&
+                    rangeSelector=100&numberSelector=30&fileUploader=&impData=impValue&telphone=9661400000-->
+
+                    <!-- Readonly vs disabled ->
+
+                    Readonly - will be used in scenario where we want to show more information to the client/user only.
+                            and we do not want to change that info.
+
+                    Disabled - it will be primarily used where there is a CONDITION involved!
+                        i.e. Enable or disable any input field based on some ACTION!
+                        e.g. - Keep the field disabled till the time user does not enter userid. -->
+            </div>
+
+            <div>
+                <!-- Text field- Noone can chnage the name - it is intentionally done.-->
+                <!-- readonly : boolean -->
+                <label for="pre_name">Pre_Filled Name : </label>
+                <input type="text" maxlength="50" id="pre_name" name="pre_name" value="ShayanKr" readonly/>
             </div>
 
             <div>
                 <label for="password">Enter Password</label>
-                <input  type="password" id="password" name="password"/>
+                <input  type="password" id="password" name="password" placeholder="Enter Complex Password containing letter, alphabet and special characters"/>
+                <input  type="password" id="password" name="password" value="0000" readonly/>
             </div>
             
 
@@ -75,11 +136,15 @@
                 <!-- radio fill - primary requirement : 
                     name of both input tag should be same for radio button-->
                 <label>Gender : </label>
-                <input type="radio" id="Male_gender" name="gender" value="male"/>
+                <input type="radio" id="Male_gender" name="gender" value="male" checked/>
+                <!-- "checked" is a boolean attribute -- it can be used to select "Male" by default-->
                 <label for="Male_gender">Male</label>
 
                 <input type="radio" id="Female_gender"/ name="gender" value="female">
                 <label for="Female_gender">Female</label>
+
+                <input type="radio" id="others_gender"/ name="gender" value="others" checked>
+                <label for="others_gender">Others</label>
 
                 <!-- To get mutually exclusive behaviour : the name for all input button should be same.  -->
 
@@ -97,7 +162,7 @@
                 <input type="checkbox" name="dsa" id="dsa"/>
                 <label for="dsa">DSA</label>
 
-                <input type="checkbox" name="ml" id="ml"/>
+                <input type="checkbox" name="ml" id="ml" checked/>
                 <label for="ml">Machine Learning</label>
 
                 <input type="checkbox" name="stat" id="stat"/>
@@ -107,7 +172,7 @@
 
             <div>
                 <label>Submission date : </label>
-                <input type="date" name="date" id="date"/>
+                <input type="date" name="date" id="date" value="2023-07-17"/>
             </div>
 
             <div>
@@ -117,12 +182,12 @@
 
             <div>
                 <label>Submission date: (only month) </label>
-                <input type="month" id="month" name="month"/>
+                <input type="month" id="month" name="month" value="2023-07"/>
             </div>
 
             <div>
                 <label for="email">Enter Email Id :</label>
-                <input type="email" id="email" name="email"/>
+                <input type="email" id="email" name="email" value="shayankumar765@gmail.com"/>
             </div>
 
             <div>
@@ -132,31 +197,115 @@
 
             <div>
                 <label>Select Range : </label>
-                <input type="range" name="rangeSelector"  />
+                <!-- By Default - range value is 0 to 100 (both encluding)-->
+                <input type="range" name="rangeSelector"  value="1000" min="500" max="1500" step="100"/>
+                <!-- 1000 will shows full range.-->
             </div>
 
             <div>
                 <label>Select Number : </label>
-                <input type="number" name="numberSelector" min="0" max="50" step="10"/>
+                <input type="number" name="numberSelector" min="0" max="50" step="10" value="30"/>
             </div>
 
 
             <div>
                 <label>File upload : </label>
-                <input type="file" name="fileUploader"  />
+                <input type="file" name="fileUploader"  multiple/>
+                <!-- "multiple" : boolean attribute
+                    help to select multiple files -->
             </div>
 
             <div>
                 <input type="hidden" name="impData" value="impValue"/>
             </div>
 
+            <div>
+                <label>Mobile Number : </label>
+                <input type="tel" name="telphone" id="telphone" value="9661400000" pattern="[0-9]{10}"/>
+
+                <!-- pattern : by using regular expression. -->
+
+                <!-- <input type="tel" name="telphone" id="telphone" value="9661400000" /> -->
+            </div>
+
+
+
+            <!-- select tag : Dropdowns!-->
+            <div>
+                <label for="course">Select Course : </label>
+                <select id="course" name="course"  multiple>
+
+                    <!-- <select id="course" name="course"  size = "1 or 2 or ... "> -->
+
+                    <!-- size : size attribute is used to show, how many values are shown at a time on a webpage.
+
+                    multiple : to show multiple option at a time with scroll-bar. -->
+                    
+                    <optgroup label="FrontEnd">
+                        <option>JavaScript</option>
+                        <option>HTML</option>
+                        <option>CSS</option>
+                    </optgroup>
+
+                    <optgroup label="BackEnd">
+                        <option>Java</option>
+                        <option>Python</option>
+                    </optgroup>
+
+                    <!-- <option>DSA</option>
+                    <option>FrontEnd</option>
+                    <option>FullStack</option>
+                    <option>Data Science</option>
+                    <option>MongoDB</option>
+                    <option selected>Python</option> -->
+
+                    <!-- 1st option is "bydefault selected"
+                        o.w. we can use "selected" : boolean attribute to select others by default.
+                            you can select multiple values using "ctrl-key"-->
+
+                </select>
+            </div>
+
+            <div>
+                <label for="address">Address : </label>
+                <textarea id="address" name="address" ></textarea>
+
+                <!-- <textarea id="address" name="address" style="height: 50px; background-color: greenyellow;"></textarea> -->
+
+                <!-- <textarea id="address" name="address" rows="5" cols="30"></textarea> -->
+            </div>
+
+            <div>
+
+            </div>
+
+
+
+
 
             <div>
                 <input type="submit" value="Register"/>
                 <input type="reset"/>
                 <input type="button" value="I'm a button"/>
+
+                <!-- image type of submit button-->
+                <input type="image" src="dummy_image.jpg" width="40px" height="auto" alt="dummy_image"/>
+
+                <!-- <button type="button" id="myButton" class="primary-button">Click Me</button>
+                <button type="button" onclick="myFunction()">Click Me</button>      -->
+
+
+                <button> I'm a button</button>
+                <!-- by default : it is a submit type.-->
+
+                <button type="button">
+                    <!-- by default : type = "submit"-->
+                    <img src="dummy_image.jpg" height="60px" width="auto"/>
+                </button>
+
             </div>
             
+
         </form>
     </main>
     <footer></footer>
@@ -164,3 +313,10 @@
 </html>
 
 
+
+
+<!-- Log in form!
+
+Login field
+Password field 
+Submit Button. -->
