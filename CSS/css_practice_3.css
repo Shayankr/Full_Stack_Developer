@@ -1,0 +1,39 @@
+/* div {
+    color: green;
+}
+
+p {
+    color: green;
+}
+
+span {
+    color: green;
+} */
+
+/* if multiple tags/id/class need some css -- we can combine them.  */
+
+
+/* div, p, span {
+    color: green;
+} */
+
+
+
+
+/* Global Selector  -- applicable to every HTML element*/
+/* * {
+    background-color: red;
+    color: white;
+} */
+
+
+
+.class1 {
+    background-color: red;
+}
+
+.class2 {
+    background-color: blueviolet;
+}
+
+/* 2nd one will be appllied . precedence: left --> right, top --> bottom. */
