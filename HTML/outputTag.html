@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <!-- output tag : is used to represent the output of any calculation dynamically. -->
+
+        <!-- Example : -->
+
+        <form oninput="res.value = parseInt(range.value) + parseInt(number.value) ">
+            <input  type="range" id="range" name="range" value="20" />
+            +
+            <input type="number" id="number" name="number" value="40" />
+            =
+            <output name="res" for="range number">60</output>
+
+        <!-- The output element represents the result of a calculation performed by the application, 
+            or the result of a user action.-->
+        </form>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
