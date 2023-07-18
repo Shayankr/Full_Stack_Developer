@@ -1,0 +1,94 @@
+
+
+a:link {
+    background-color: purple;
+}
+
+a:visited {
+    background-color: yellow;
+}
+/* :visited - It selects and styles a link that has been visited by the user. */
+
+
+
+
+
+/* Example: Change the background color when hovering over a link */
+a:hover {
+    background-color: lightgray;
+}
+
+
+/* Example: Change the text color when an anchor link is clicked */
+a:active {
+    color: red;
+  }
+
+
+
+div:hover{
+    background-color: rgb(27, 185, 133);
+    color: blue;
+}
+
+
+
+/* ------------ Apply Pseudo class on form ----------- */
+/* input:focus {
+    background-color: aqua;
+} */
+
+input:required {
+    background-color: rgb(209, 161, 173);
+}
+
+input:focus {
+    background-color: aqua;
+}
+
+/* #username:invalid{
+    border: 5px solid red;
+} */
+
+#username:valid{
+    border: 5px solid green;
+}
+
+#username:invalid{
+    border: 5px solid red;
+}
+
+
+input[type="checkbox"]:checked + label{
+    color: green;
+    font-style: italic;
+}
+
+input:checked {
+    height: 20px;
+    outline: 5px solid brown;
+}
+
+
+input:read-only{
+    border:  5px solid orchid;
+}
+
+input:read-write{
+    border: 5px solid olivedrab;
+}
+
+input:disabled{
+    background-color: aquamarine;
+}
+
+/* input:enabled{
+    background-color: black;
+} */
+
+input:optional{
+    background-color: brown;
+}
+
+
+/*  */
