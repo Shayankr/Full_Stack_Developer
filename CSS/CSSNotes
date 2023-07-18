@@ -104,7 +104,7 @@ During our HTML Lectures :
 
 --------------------
 
-Selectors :
+////////Selectors :///////
 
 1. Element Selector :
 
@@ -112,48 +112,110 @@ p {}
 div {}
 
 
-
+     ------------
 2. ID Selecor :
 
 #ID_NAME {}
 
 
-
+      -----------------
 3. CLASS Selector :
 
 .CLASS_NAME {}
 
 
-
+   ----------------------
 4. CLASS Selector with ELEMENT :
 
             Apply the CSS only to given class with ospecific tag only.
 
-<ELEMENT_NAME><CLASS_NAME>
+<ELEMENT_NAME><.CLASS_NAME>{}
 
 eg. : p.bgColor --> apply css ONLY to those "p" tags which are having "bgColor" class.
 
 //
 
 
-
+   ----------------------
 5. Global Selector :
     Symbol - *
 
 
 
 
-
+     --------------------------
 6. Combinators Selectors :
 
 Combination of more than one selector.
 
+
 1. Descendent Selector :
 
-<SELECTOR1><SPACE><SELECTOR2> {
+<SELECTOR1><SPACE><SELECTOR2> .... {
     //apply CSS here
 }
 -> ALL SELECTOR (all childrens/grandchildrens) under SELECTOR1 (parent) should be selected.
 
+
+
+2. Child Selector (>):
+
+Syntax : <SELECTOR1> > <SELECTOR2>
+
+-> Select only direct children (SELECTOR2) of parent (SELECTOR1).
+
+
+
+3. General Siblings (~) :
+
+Syntax : <SELECTOR1>~<SELECTOR2>
+
+        SELECTOR1 -- ke just bahar jitne bhi jo -- SELECTOR2 -- hain -- sirf uspe -- apply kro.
+
+    
+4. Adjacent Sibling (+) :
+
+Syntax : <SELECTOR1>+<SELECTOR2> {....}
+
+
+5. //
 ----------------------------------------------------------------------------------------------
-//
+//////////////////////////   Pseudo Elements :    ///////////////////////
+
+-> to style any html tag before/after
+-> to style first letter, first line.
+
+
+Syntax : 
+
+<SELECTOR>::<PSEUDO_ELEMENT>
+
+Tasks :
+    bgColor only forst letter/line of paragraph tag ?
+
+1. first-letter :
+
+2. first-line :
+
+3. for first word -- use span concept.
+
+4. marker : 
+    ::marker{
+        color: green;
+    }
+
+5. before :
+
+6. after : 
+
+7. selection :
+
+
+-------------------------------------------------------------------------------------------------
+
+////////// ------- pseudo classes--------- /////////
+
+Syntax : <SELECTOR>:<NAME_OF_PSEUDO_CLASS>
+
+-> is used to define STATE of HTML element.
+
