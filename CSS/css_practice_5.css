@@ -1,0 +1,107 @@
+/* div p {
+    background-color: red;
+} */
+/* <SPACE> -- it allows to apply on all child / grandChild. */
+
+
+
+
+/* div div p {
+    background-color: yellow;
+}
+
+
+
+div > p {
+    background-color: rgb(172, 83, 137);
+} */
+/* ">" : it allows style only on direct child tag. */
+
+
+/* HTML element : 
+ID
+Class
+
+Combination : 
+ Space (Descendent)
+ > (Child)
+*/
+
+
+/* #unique > p {
+    background-color: red;
+} */
+
+
+/* div p > span {
+    background-color: cadetblue;
+} */
+
+
+
+
+/* ---------------------------------------------- */
+
+/* div~ p {
+    background-color: red;
+} */
+
+
+/* ------------------------------------------ */
+/* only the 1st paragraph should be "red" */
+
+/* div +p {
+    background-color: red;
+} */
+
+
+
+ /* ----------- pseudo element  ----------------- */
+
+ p::first-letter{
+    background-color: blue;
+    font-size: 25px;
+ }
+
+ p::first-line{
+    background-color: red;
+ }
+
+ .bgColor {
+    background-color: yellowgreen;
+    font-size: 20px;
+ }
+
+
+
+
+  /* ----- play with list (unordered)-------- */
+::marker{
+    color: green;
+}
+
+#pseudo_p::before {
+    content: "APPENDING BEFORE";
+    font-size: 24px;
+    color: yellow;
+}
+
+/* p::before {
+    content: "APPENDING BEFORE";
+    font-size: 24px;
+    color: yellow;
+} */
+
+p::after {
+    content: "APPENDING AFTER";
+    font-size: 24px;
+    color: rgb(228, 228, 108);
+}
+
+
+
+/* ------selection------------ */
+p::selection{
+    background-color: orange;
+}
+
