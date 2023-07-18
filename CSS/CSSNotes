@@ -215,7 +215,44 @@ Tasks :
 
 ////////// ------- pseudo classes--------- /////////
 
-Syntax : <SELECTOR>:<NAME_OF_PSEUDO_CLASS>
+Syntax : 
+    <SELECTOR>:<NAME_OF_PSEUDO_CLASS>
 
--> is used to define STATE of HTML element.
+-> is used to define STATE of HTML element. eg- hover, click, focus, etc.
 
+
+Example :
+
+Anchor tag (a).
+Anchor tag has its own multiple states :
+
+1. link
+2. visited
+3. hover
+4. active
+
+-> order of applying these pseudo classes is important.
+
+
+
+Forms :
+
+Pseudo class :
+
+1. :focus  ()
+2. :required  (opposite of optional)
+3. :valid
+4. :invalid  (opposite of valid , either valid or invalid)
+5. :disabled
+6. :checked (not working ??)
+    input[type="checkbox"]:checked + label {    font-weight: bold; color: green;    }
+7. :read-only
+8. :read-write (opposite of read-only)
+9. :enabled  (opposite of disabled)
+10. :optional  (opposite of required)
+
+
+---------------------------------------------------------------------------------------------
+_____________________________________________________________________________________________
+
+Attribute Selector :
